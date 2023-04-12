@@ -56,6 +56,18 @@ public class MrpProduction implements Serializable {
         this.nombreMaquinaProduccion = nombreMaquinaProduccion;
     }
 
+    public MrpProduction(int id, String name, String productId, double productQty, int locationSrcId, int bachada, String nombreMaquinaProduccion, int idMaquinaProduccion, int prioridad) {
+        this.id = id;
+        this.name = name;
+        this.productId = productId;
+        this.productQty = productQty;
+        this.locationSrcId = locationSrcId;
+        this.bachada = bachada;
+        this.nombreMaquinaProduccion = nombreMaquinaProduccion;
+        this.idMaquinaProduccion = idMaquinaProduccion;
+        this.prioridad = prioridad;
+    }
+
     public int getId() {
         return id;
     }
