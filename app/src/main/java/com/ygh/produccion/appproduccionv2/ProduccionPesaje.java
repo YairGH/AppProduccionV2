@@ -510,7 +510,7 @@ public class ProduccionPesaje extends UsbSerialAppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            new EnviaMqttTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "0.0");
+                            new EnviaMqttTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "0.0", "FIN");
                         } catch (Exception ex) {
                             txtTest.setText(ex.getMessage());
                         }
@@ -668,7 +668,7 @@ public class ProduccionPesaje extends UsbSerialAppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            new EnviaMqttTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, cantRecibida + "");
+                            new EnviaMqttTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, cantRecibida + "", "");
                         } catch (Exception ex) {
                             txtTest.setText(ex.getMessage());
                         }
@@ -1209,6 +1209,9 @@ public class ProduccionPesaje extends UsbSerialAppCompatActivity {
         });
     }
 
+    /**
+     * Si recibe FIN como segundo argumento manda en vacío la informción
+     */
     private class EnviaMqttTask extends AsyncTask<String, Void, Void> {
         protected Void doInBackground(String... arg) {
             try {
@@ -1226,9 +1229,15 @@ public class ProduccionPesaje extends UsbSerialAppCompatActivity {
 
                 JSONObject jsonParam = new JSONObject();
                 jsonParam.put("maquina", usuarioActivo.getNombreMaquinaReparto().replaceAll(" ", ""));
-                jsonParam.put("producto", stockMove.getProductId());
-                jsonParam.put("pesoProgramado", cantProgramada + "");
-                jsonParam.put("pesoReal", arg[0].toString());
+                if(!arg[1].toString().equals("FIN")) {
+                    jsonParam.put("producto", stockMove.getProductId());
+                    jsonParam.put("pesoProgramado", cantProgramada + "");
+                    jsonParam.put("pesoReal", arg[0].toString());
+                } else {
+                    jsonParam.put("producto", "");
+                    jsonParam.put("pesoProgramado", "0.0");
+                    jsonParam.put("pesoReal", arg[0].toString());
+                }
                 jsonParam.put("ipServer", configServer.getServerMqtt());
                 jsonParam.put("puertoServer", configServer.getPortMqtt());
 
