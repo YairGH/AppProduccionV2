@@ -31,20 +31,6 @@ import com.ygh.produccion.appproduccionv2.pojos.ServerConfig;
 import com.ygh.produccion.appproduccionv2.pojos.StockPicking;
 import com.ygh.produccion.appproduccionv2.pojos.Usuario;
 
-import org.eclipse.paho.android.service.MqttAndroidClient;
-import org.eclipse.paho.client.mqttv3.IMqttActionListener;
-import org.eclipse.paho.client.mqttv3.IMqttClient;
-import org.eclipse.paho.client.mqttv3.IMqttToken;
-import org.eclipse.paho.client.mqttv3.MqttClient;
-import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
-import org.eclipse.paho.client.mqttv3.MqttException;
-import org.eclipse.paho.client.mqttv3.MqttMessage;
-import org.eclipse.paho.client.mqttv3.MqttPersistenceException;
-
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 public class Login extends AppCompatActivity {
 
@@ -54,8 +40,8 @@ public class Login extends AppCompatActivity {
     private LinearLayout mainLayout;
     private LoadingDialog loadingDialog;
 
-    DaoOrdenesProduccion daoOrdenesProduccion = null;
-    DaoOrdenTraslado daoOrdenTraslado = null;
+        DaoOrdenesProduccion daoOrdenesProduccion = null;
+        DaoOrdenTraslado daoOrdenTraslado = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,8 +58,8 @@ public class Login extends AppCompatActivity {
         daoOrdenesProduccion = new DaoOrdenesProduccion(this);
         daoOrdenTraslado = new DaoOrdenTraslado(this);
 
-     //   txtUsuario.setText("admin");
-      //  txtPassword.setText("123456789");
+        //txtUsuario.setText("admin");
+        //txtPassword.setText("123456789");
         validaUsuarioActivo();
 
     }
@@ -197,19 +183,8 @@ public class Login extends AppCompatActivity {
                     return;
                 } else {
 
-                    OrdenesProduccionInfo ordenTraslado = daoOrdenTraslado.getOrdenTrasladoInfo();
-                    MrpProduction mrpProduction = daoOrdenesProduccion.getProduccion();
-
-                    if(ordenTraslado != null) {
-                        Intent intent = new Intent(Login.this, TrasladoPesaje.class);
-                        startActivity(intent);
-                    } else if(mrpProduction != null) {
-                        Intent intent = new Intent(Login.this, ProduccionPesaje.class);
-                        startActivity(intent);
-                    } else {
-                        Intent intent = new Intent(Login.this, ListaOrdenesProduccion.class);
-                        startActivity(intent);
-                    }
+                    Intent intent = new Intent(Login.this, MenuProduccionReparto.class);
+                    startActivity(intent);
 
                     return;
                 }

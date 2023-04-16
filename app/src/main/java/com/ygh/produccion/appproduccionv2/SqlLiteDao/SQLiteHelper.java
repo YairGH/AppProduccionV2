@@ -9,13 +9,15 @@ import com.ygh.produccion.appproduccionv2.pojos.ConfigVariablesBascula;
 import com.ygh.produccion.appproduccionv2.pojos.ConfiguracionSerial;
 import com.ygh.produccion.appproduccionv2.pojos.MrpProduction;
 import com.ygh.produccion.appproduccionv2.pojos.OrdenesProduccionInfo;
+import com.ygh.produccion.appproduccionv2.pojos.RmsServida;
+import com.ygh.produccion.appproduccionv2.pojos.RmsServidaLine;
 import com.ygh.produccion.appproduccionv2.pojos.ServerConfig;
 import com.ygh.produccion.appproduccionv2.pojos.StockMove;
 import com.ygh.produccion.appproduccionv2.pojos.Usuario;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "produccion_app.db";
-    private static final int DATABASE_VERSION = 18;
+    private static final int DATABASE_VERSION = 19;
 
     public SQLiteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -95,6 +97,32 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             + StockMove.COLUMN_IS_PREPESADO + " INTEGER "
             + ")";
 
+    private static final String DATABASE_CREATE_SERVIDAS = "create table "
+            + RmsServida.TABLE_SERVIDA + "( "
+            + RmsServida.COLUMN_SERVIDA_ID + " INTEGER, "
+            + RmsServida.COLUMN_SERVIDA_BACHADA + " INTEGER, "
+            + RmsServida.COLUMN_SERVIDA_FORMULA + " TEXT, "
+            + RmsServida.COLUMN_SERVIDA_NAME + " TEXT, "
+            + RmsServida.COLUMN_SERVIDA_IS_PROCESADA + " INTEGER, "
+            + RmsServida.COLUMN_SERVIDA_ID_MAQUINA + " INTEGER, "
+            + RmsServida.COLUMN_SERVIDA_MAQUINA_REPARTO + " TEXT, "
+            + RmsServida.COLUMN_SERVIDA_TOTAL_REPARTIR + " REAL, "
+            + RmsServida.COLUMN_SERVIDA_TOTAL_PRODUCIDA + " REAL, "
+            + RmsServida.COLUMN_SERVIDA_FECHA + " TEXT "
+            + ")";
+
+    private static final String DATABASE_CREATE_SERVIDA_LINES = "create table "
+            + RmsServidaLine.TABLE_SERVIDA_LINE + "( "
+            + RmsServidaLine.COLUMN_SERVIDA_LINE_ID + " INTEGER, "
+            + RmsServidaLine.COLUMN_SERVIDA_LINE_ID_SERVIDA + " INTEGER, "
+            + RmsServidaLine.COLUMN_SERVIDA_LINE_QTY_PROGRAMADA + " REAL, "
+            + RmsServidaLine.COLUMN_SERVIDA_LINE_QTY_UOM + " REAL, "
+            + RmsServidaLine.COLUMN_SERVIDA_LINE_LOT_RANCHO + " TEXT, "
+            + RmsServidaLine.COLUMN_SERVIDA_LINE_FECHA + " TEXT, "
+            + RmsServidaLine.COLUMN_SERVIDA_LINE_FH_INICIO_REP + " TEXT, "
+            + RmsServidaLine.COLUMN_SERVIDA_LINE_FH_FIN_REP + " TEXT, "
+            + RmsServidaLine.COLUMN_SERVIDA_LINE_IS_PROCESADA + " INTEGER "
+            + ")";
 
     @Override
     public void onCreate(SQLiteDatabase database) {
@@ -105,6 +133,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         database.execSQL(DATABASE_CREATE_STOCK_MOVE);
         database.execSQL(DATABASE_CREATE_CONFIG_SERIAL);
         database.execSQL(DATABASE_CREATE_CONFIG_VARIABLES);
+        database.execSQL(DATABASE_CREATE_SERVIDAS);
+        database.execSQL(DATABASE_CREATE_SERVIDA_LINES);
     }
 
     @Override
@@ -119,6 +149,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + StockMove.TABLE_STOCK_MOVE);
         db.execSQL("DROP TABLE IF EXISTS " + ConfiguracionSerial.TABLE_CONFIG_SERIAL);
         db.execSQL("DROP TABLE IF EXISTS " + ConfigVariablesBascula.TABLE_CONFIG_VARIABLES);
+        db.execSQL("DROP TABLE IF EXISTS " + RmsServida.TABLE_SERVIDA);
+        db.execSQL("DROP TABLE IF EXISTS " + RmsServidaLine.TABLE_SERVIDA_LINE);
 
         onCreate(db);
     }

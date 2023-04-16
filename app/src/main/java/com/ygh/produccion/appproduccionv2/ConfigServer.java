@@ -52,7 +52,7 @@ public class ConfigServer extends AppCompatActivity {
 
         dao = new DaoConfigServerSql(this);
 
-       /* txtUrl.setText("https://engorda.koon.app/");
+     /*   txtUrl.setText("https://engorda.koon.app/");
         txtDb.setText("15eengordaC1");
         txtServerMQTT.setText("108.175.3.161");
         txtPortMQTT.setText("1883");*/

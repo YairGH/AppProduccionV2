@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrdenesReparto"
+    android:id="@+id/mainLayoutOrdenesReparto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/lblTituloOR_reparto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Orden de Reparto"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <TextView
+            android:id="@+id/lblFechaReparto_reparto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/layout_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView14_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:text="Servida:"
+                            android:textColor="@color/white"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <TextView
+                            android:id="@+id/lblServida_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/layout_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView16_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Máquina"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <TextView
+                            android:id="@+id/lblMaquinaReparto_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/layout_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView14_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Qty Producida:"
+                            android:layout_marginTop="20dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <TextView
+                            android:id="@+id/lblQtyProducida_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:text="0.00"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/layout_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView16_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Qty a Servir"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/lblQtyRepartir_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:text="0.00"
+                            android:textColor="@color/white"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/layout_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView21_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Qty Servida:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/lblQtyServida_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:text="0.00"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/layout_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView16_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Formula:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/lblFormula_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:text="0.00"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_bg"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView14_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Corrales:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/lblCantLotes_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:text="0.00"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/layout_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView16_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Bachada:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/lblBachada_reparto"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:text="0.00"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="iniciarReparto"
+                    android:text="Iniciar Reparto"
+                    android:backgroundTint="#ebebeb"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"/>
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

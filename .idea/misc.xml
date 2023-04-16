@@ -25,16 +25,24 @@
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/Android/AppProduccionV2/app/src/main/res/layout/row_ordenes_produccion.xml" value="0.25" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/Android/AppProduccionV2/app/src/main/res/menu/busqueda_menu.xml" value="0.18" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/Android/AppProduccionV2/app/src/main/res/menu/login_menu.xml" value="0.1" />
+        <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/drawable/circle_button.xml" value="0.122" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_alta_usuario.xml" value="0.1" />
+        <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_busca_corral.xml" value="0.1109375" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_config_serial.xml" value="0.25" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_config_server.xml" value="0.33" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_detalles_orden_produccion.xml" value="0.33" />
+        <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_iniciar_corral.xml" value="0.1109375" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_lista_ordenes_produccion.xml" value="0.1" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_login.xml" value="0.26875" />
+        <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_menu_produccion_reparto.xml" value="0.1" />
+        <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_ordenes_reparto.xml" value="0.33" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_produccion_pesaje.xml" value="0.25" />
+        <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_reparto_corral.xml" value="0.1" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_timer.xml" value="0.25" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/activity_traslado_pesaje.xml" value="0.2" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/row_ordenes_produccion.xml" value="0.1" />
+        <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/layout/row_servida_lines.xml" value="0.1109375" />
+        <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/menu/busqueda_menu.xml" value="0.21" />
         <entry key="..\:/Users/soptec/Documents/YairGH/AppsBascula/AppProduccionV2/AppProduccionV2/app/src/main/res/menu/login_menu.xml" value="0.1" />
       </map>
     </option>

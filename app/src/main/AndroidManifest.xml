@@ -48,6 +48,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".BuscaCorral"
+            android:exported="false" />
+        <activity
+            android:name=".RepartoCorral"
+            android:exported="false" />
+        <activity
+            android:name=".OrdenesReparto"
+            android:exported="false" />
+        <activity
+            android:name=".IniciarCorral"
+            android:exported="false" />
+        <activity
             android:name=".MenuProduccionReparto"
             android:exported="false" />
         <activity
@@ -114,7 +126,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name="org.eclipse.paho.android.service.MqttService"></service>
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
     </application>
 
 </manifest>

@@ -506,6 +506,17 @@ public class ProduccionPesaje extends UsbSerialAppCompatActivity {
             if (indexInsumo == -1) {
                 loadingDialog = new LoadingDialog(this);
 
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            new EnviaMqttTask().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, "0.0");
+                        } catch (Exception ex) {
+                            txtTest.setText(ex.getMessage());
+                        }
+                    }
+                });
+
                 loadingDialog.startLoadingDialog("Guardando Información...");
                 txtTest.setText("Guardando información...");
 
@@ -746,7 +757,7 @@ public class ProduccionPesaje extends UsbSerialAppCompatActivity {
                 //buzzerTask.cancel(true);
                 //waitBluetoothResponse.cancel(true);
                 usbSeriaConn.stopUsbSerialListener();
-                Intent intent = new Intent(ProduccionPesaje.this, ListaOrdenesProduccion.class);
+                Intent intent = new Intent(ProduccionPesaje.this, MenuProduccionReparto.class);
                 startActivity(intent);
 
                 //ProcessPhoenix.triggerRebirth(getApplicationContext());
